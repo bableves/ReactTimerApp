@@ -4,12 +4,14 @@ var CountdownForm = require('CountdownForm');
 var Controls = require('Controls');
 
 var Countdown = React.createClass ({
+  //Initial states
   getInitialState: function () {
     return {
       count: 0,
       countdownStatus: 'stopped'
     };
   },
+
   componentDidUpdate: function (prevProps, prevState) {
     if (this.state.countdownStatus !== prevState.countdownStatus) {
       switch (this.state.countdownStatus) {
